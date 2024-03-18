@@ -5,7 +5,7 @@ import (
 	"os"
 
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/trashhalo/imgcat"
+	"github.com/remogatto/imgcat"
 )
 
 const usage = `imgcat [pattern|url]

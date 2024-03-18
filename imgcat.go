@@ -5,7 +5,7 @@ import (
 	_ "image/jpeg"
 	_ "image/png"
 
-	image "github.com/trashhalo/imgcat/component"
+	image "github.com/remogatto/imgcat/component"
 
 	tea "github.com/charmbracelet/bubbletea"
 )
@@ -20,11 +20,11 @@ type Model struct {
 }
 
 func NewModel(urls []string) Model {
-	image := image.New(1, 1, urls[0]);
+	image := image.New(1, 1, urls[0])
 	return Model{
 		selected: 0,
-		urls: urls,
-		image: image,
+		urls:     urls,
+		image:    image,
 	}
 }
 
@@ -69,7 +69,6 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	m.image, cmd = m.image.Update(msg)
 	return m, cmd
 }
-
 
 func (m Model) View() string {
 	if m.err != nil {

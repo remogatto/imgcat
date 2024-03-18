@@ -1,4 +1,4 @@
-module github.com/trashhalo/imgcat
+module github.com/remogatto/imgcat
 
 go 1.14
 
